@@ -1,0 +1,325 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    background-image:url('images/FondoNegro.png');
+    font-size: 0.50em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    overflow:hidden;
+    position:relative;  
+}
+
+a:link, a:visited
+{
+    color: blue;
+    text-decoration:none;
+    text-align:center;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+    border-radius: 5px;
+    background-color: Green;
+}
+
+a:selected
+{
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: Green;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+span
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > span, .rightColumn > h2, leftColumn > span, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width:10000px;
+    margin: 20px auto 0px auto;
+}
+
+.header
+{
+    position:relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    margin-left:30px;
+}
+
+.header span
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 1.7em;
+    font-family: 'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: normal; 
+}
+
+.main
+{
+    margin: 12px 8px 8px 8px;
+    min-height:600px;
+    z-index:0;
+}
+
+.MiddleCol
+{
+    position:relative;
+    left:0px;
+    top:0px;
+    margin-right:250px;
+    z-index:0;
+    max-width:1800px;
+    max-height: 700px;
+}
+
+
+
+.footer
+{
+    color: #4e5766;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+    min-height:50px;
+    min-width:100px;
+    margin-left:30px;
+}
+
+.logo
+{
+    max-height:30px;
+    max-width:30px;
+    float:left;
+    margin-right:10px;
+}
+
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+.MainMenu
+{
+    display: block;
+    text-align: left;
+    width:1050px!important;
+}
+
+.MainMenu a:link
+{
+    color: white;
+    text-decoration:none;
+    text-align:center;
+}
+
+
+.MainMenu a:visited
+{
+    color: white;
+    text-decoration:none;
+    text-align:center;
+}
+
+.MenuOption
+{
+    display:inline-block;
+    width:170px;
+    font-size:small;
+}
+
+
+.MenuOptionSelected
+{
+    display:inline-block;
+    width:170px;
+    font-size:small;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: Green;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: 1050px;
+    border-bottom:1px solid green;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+/*--------IMAGES-----------*/
+.imageLink
+{
+    color:Black!important;
+}

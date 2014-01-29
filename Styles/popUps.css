@@ -1,0 +1,21 @@
+﻿body 
+{
+    overflow:visible;
+}
+
+
+.textPopUp
+{
+    font-size:0.9em;
+    font-family:"Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color:Black;
+}
+
+.titlePopUp
+{
+    font-size:1em;
+    font-family:"Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color:Black;
+    font-weight:bolder;
+    text-decoration:underline;
+}

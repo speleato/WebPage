@@ -1,0 +1,277 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+#BodyContent
+{
+    overflow:hidden;
+    position:relative;
+    margin:0px;
+    padding:0px;
+	/*height:100%;*/
+    z-index:0;
+    left:0;
+    top:0;
+}
+
+#MainContainer
+{
+    position:relative;
+    left:0; 
+    width:12700px; 
+    top:0; 
+    /*height:100%;*/
+    z-index:0;
+    display:inline-block;
+}
+
+p {
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+a:link, a:visited
+{
+    color: blue;
+    text-decoration:none;
+    text-align:center;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+    border-radius: 5px;
+    background-color: Green;
+}
+
+a:selected
+{
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: Green;
+}
+/* CONTROLS
+----------------------------------------------------------*/
+#Home,#Awards,#Before,#Links,#Research,#Teaching
+{
+     width:1010px; 
+     height:100%;
+     float:left!important;
+     margin-right:100px;
+     z-index:2;
+     position:relative;
+     max-width:1400px;
+     height:500px;
+     max-height:500px;
+}
+
+
+#UC_Home, #UC_Awards, #UC_Before, #UC_Research, #UC_Teaching
+{
+	border:0;	
+	overflow:hidden;
+	width:1010px; 
+	height:550px;
+	margin-right:100px;
+	z-index:2;
+	position:relative;
+	max-width:1400px;
+	max-height:540px;
+}
+
+#UC_LinksILike
+{
+	border:0;	
+	overflow:hidden;
+	width:1010px; 
+	height:550px;
+	margin-right:100px;
+	z-index:2;
+	position:relative;
+}
+
+
+
+
+.content
+{
+    padding:60px 20px;
+    position:relative;
+    float:left;
+    z-index:0;
+}
+
+
+#Home
+{
+    background-image:url('images/fotoweb4.png')!important;
+    min-height:500px;
+    border-radius: 50px;
+}
+
+#Before
+{
+    background-image:url('images/flor.JPG')!important;
+    min-height:500px;
+    border-radius: 50px;
+}
+
+#Research
+{
+    background-image:url('images/granada.JPG')!important;
+    min-height:500px;
+    border-radius: 50px;
+    background-color:transparent;
+}
+
+#Teaching
+{
+    background-image:url('images/china.JPG')!important;
+    min-height:500px;
+    border-radius: 50px;
+}
+
+#Awards
+{
+    background-image:url('images/fotoweb1.jpg')!important;
+    min-height:500px;
+    border-radius: 50px;
+}
+
+#Links
+{
+    background-image:url('images/fotoweb2.jpg')!important;
+    min-height:500px;
+    border-radius: 50px;
+}
+
+
+/*----------HOME---------------*/
+
+.title_control
+{
+    font-size:1.7em;
+    font-family:"Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color:Black;
+    margin-left:25px;
+}
+
+.text
+{
+    font-size:0.8em;
+    font-family:"Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color:Black;
+    margin-left:25px;
+}
+
+.text_NoMargin
+{
+    font-family:"Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color:Black;
+    text-decoration:none;
+    font-weight:normal;
+}
+
+.text_doubleMargin
+{
+    font-size:0.8em;
+    font-family:"Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color:Black;
+    margin-left:50px;
+}
+
+.titleResearch
+{
+    font-size:1.2em;
+    font-family:"Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color:Black;
+    margin-left:25px;
+    font-weight:bolder;
+    text-decoration:underline;
+}
+
+
+
+/* IMAGES && TABLES
+----------------------------------------------------------*/
+
+#imageHome
+{
+    float:left;
+    min-height: 550px;
+}
+
+#imageResearch
+{
+    float:right!important;
+}
+
+#photoGemma
+{
+    max-height:280px;
+    max-width:280px;
+    float:left;
+    border:#000000 solid 2px;
+}
+
+#bodyResearch
+{
+    height:500px;
+    overflow:hidden;
+}
+
+/*-------------SCROLLBAR--------------*/
+
+.contentScroller {
+  position: absolute;
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.Scroller-Content {
+  position: absolute;
+  top:0px; 
+  left: 0px;
+  width: 900px;
+}
+
+#Scrollbar-Container
+{
+    float:right;
+    height:500px;
+}
+
+.Scrollbar-Up {
+    background-image:url("images/arrowUp.png");
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+}
+.Scrollbar-Track {
+    background-color:transparent;
+    height: 450px;
+    top: 20px;
+    width: 10px;
+}
+.Scrollbar-Handle {
+    background-color: white;
+    height: 30px;
+    width: 10px;
+    margin-left:984px;
+    margin-top:33px;
+    border-radius: 2px;
+    position:absolute;
+}
+.Scrollbar-Down {
+    background-image:url("images/arrowDown.png");
+    font-size: 0;
+    height: 25px;
+    top: 190px;
+    width: 25px;
+    border-radius: 3px;
+}

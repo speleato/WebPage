@@ -1,0 +1,147 @@
+<html>
+<head>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Controls.css" rel="stylesheet" type="text/css" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script src="js/jsScroller.js" type="text/javascript"></script>
+    <script src="js/jsScrollbar.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function Animate2id(id, container) {
+
+            //returns the menu styles to basic style
+            document.getElementById('Menu_Before').setAttribute('class', 'MenuOption');
+            document.getElementById('Menu_Home').setAttribute('class', 'MenuOption');
+            document.getElementById('Menu_Research').setAttribute('class', 'MenuOption');
+            document.getElementById('Menu_Teaching').setAttribute('class', 'MenuOption');
+            document.getElementById('Menu_Awards').setAttribute('class', 'MenuOption');
+            document.getElementById('Menu_Links').setAttribute('class', 'MenuOption');
+
+            //sets opacities to initial values
+            $('#Home').stop().animate({ opacity: 1 }, 0);
+            $('#Before').stop().animate({ opacity: 1 },0);
+            $('#Research').stop().animate({ opacity: 1 },0);
+            $('#Teaching').stop().animate({ opacity: 1 },0);
+            $('#Awards').stop().animate({ opacity: 1 },0);
+            $('#Links').stop().animate({ opacity: 1 },0);
+
+            //we set the selected option as the new selected style if it is not the
+            document.getElementById(id).setAttribute('class', 'MenuOptionSelected');
+
+            var animSpeed = 2000; //set animation speed
+            var $MainContainer = $('#MainContainer'); //define the container to move
+            var easeType = 'easeOutQuart'; //set default easing type
+
+            //do the deplacement animation
+            $MainContainer.stop().animate({ "left": -(document.getElementById(container).offsetLeft - 30) }, animSpeed, easeType);
+
+            //fade extra content
+            switch (container) {
+                case "Home":
+                    $('#Before').stop().animate({ opacity: 0 }, 1500);
+                    break;
+                case "Before":
+                    $('#Home').stop().animate({ opacity: 0 }, 1500);
+                    $('#Research').stop().animate({ opacity: 0 }, 1500);
+                    break;
+                case "Research":
+                    $('#Before').stop().animate({ opacity: 0 }, 1500);
+                    $('#Teaching').stop().animate({ opacity: 0 }, 1500);
+                    break;
+                case "Teaching":
+                    $('#Research').stop().animate({ opacity: 0 }, 1500);
+                    $('#Awards').stop().animate({ opacity: 0 }, 1500);
+                    break;
+                case "Awards":
+                    $('#Teaching').stop().animate({ opacity: 0 }, 1500);
+                    $('#Links').stop().animate({ opacity: 0 }, 1500);
+                    break;
+                case "Links":
+                    $('#Awards').stop().animate({ opacity: 0 }, 1500);
+            }
+        }
+     </script>
+</head> 
+
+<body dir="ltr">
+    <form>
+        <div class="MiddleCol">
+            <div class="page">
+                <div class="header">
+                    <div class="title">
+                        <span>
+                            Gemma Berenguer's personal webpage
+                        </span>
+                    </div>
+                            <div class="clear hideSkiplink">
+                                <table id="MainMenu" class="MainMenu">
+                                    <tr>
+                                        <td>
+                                            <a href="#" id="Menu_Home" title="Home" onclick="javascript:Animate2id('Menu_Home', 'Home'); return false;" class="MenuOption">Home</a>
+                                        </td>
+                                        <td>
+                                            <a href="#" id="Menu_Before" title="Before Purdue" onclick="javascript:Animate2id('Menu_Before', 'Before'); return false;" class="MenuOption">Before Purdue</a>
+                                        </td>
+                                        <td>
+                                            <a href="#" id="Menu_Research" title="Research" onclick="javascript:Animate2id('Menu_Research', 'Research'); return false;"  class="MenuOption">Research</a>
+                                        </td>
+                                        <td>
+                                            <a href="#" id="Menu_Teaching" title="Teaching" onclick="javascript:Animate2id('Menu_Teaching', 'Teaching'); return false;" class="MenuOption">Teaching</a>
+                                        </td>
+                                        <td>
+                                            <a href="#" id="Menu_Awards" title="Awards" onclick="javascript:Animate2id('Menu_Awards', 'Awards'); return false;" class="MenuOption">Awards</a>
+                                        </td>
+                                        <td>
+                                            <a href="#" id="Menu_Links" title="Links I Like" onclick="javascript:Animate2id('Menu_Links', 'Links'); return false;" class="MenuOption">Links I like</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                </div>
+				
+				<div id="BodyContent">
+				    <div id="MainContainer" class="SlidableContent">
+				        <div id="Home" class="content">
+				        	<iframe id="UC_Home" src="Controls/Home.html"></iframe>
+				        </div>
+				        <div id="Before" class="content">
+				        	<iframe id="UC_Before" src="Controls/Before.html"></iframe>
+				        </div>
+				        <div id="Research" class="content">
+				        	<iframe id="UC_Research" src="Controls/Research.html"></iframe>
+				        </div>
+				        <div id="Teaching" class="content">
+				        	<iframe id="UC_Teaching" src="Controls/Teaching.html"></iframe>
+				        </div>
+				        <div id="Awards" class="content">
+				        	<iframe id="UC_Awards" src="Controls/Awards.html"></iframe>
+				        </div>
+				        <div id="Links" class="content">
+				        	<iframe id="UC_LinksILike" src="Controls/LinksILike.html"></iframe>				        	
+				        </div>
+				    </div>
+				</div>
+                <div class="clear">
+            </div>
+        </div>
+    </div>
+	    <div class="footer" id="footer"> 
+	        <a href="http://www.twitter.com/gemma_berenguer" class="imageLink" target="_blank">
+	            <img id="facebookLogo" src="Styles/images/twitter.gif" class="logo" target="_blank"/>
+	        </a>
+	        <a href="http://www.linkedin.com/pub/gemma-berenguer/3/b94/41" class="imageLink">
+	            <img id="linkedinLogo" src="Styles/images/linkedin.png" class="logo"/>
+	        </a>
+	    </div>
+    </form>
+    <script type="text/javascript">
+        window.onload = $('#Menu_Home').click(); 
+    </script>
+</body>
+</html>
